@@ -372,3 +372,23 @@ comments.
 
 Use hyphens instead of underscores in flag names (e.g. `my-flag` instead of
 `my_flag`).
+
+## Project Status Update (2025年11月4日)
+
+### Current State
+
+The project is currently in development. A recent commit was made to re-add
+`strip-ansi` to `devDependencies`.
+
+### Handover Notes
+
+- **Last Commit**: `f671ea721` - "feat: Re-add strip-ansi to devDependencies."
+  This commit addressed the re-addition of a development dependency.
+- **Untracked File**: The file `fixing.md` is present in the root directory but
+  is not tracked by Git. It was not included in the last commit.
+
+### To-Do List
+
+- [ ] Review the purpose of `fixing.md` and decide whether to track it or remove
+      it.
+- [ ] Continue with the next development task.
