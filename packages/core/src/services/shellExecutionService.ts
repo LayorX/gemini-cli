@@ -429,6 +429,7 @@ export class ShellExecutionService {
         name: 'xterm',
         cols,
         rows,
+        encoding: 'utf8',
         env: {
           ...process.env,
           GEMINI_CLI: '1',
@@ -568,12 +569,8 @@ export class ShellExecutionService {
             () =>
               new Promise<void>((resolve) => {
                 if (!decoder) {
-                  const encoding = getCachedEncodingForBuffer(data);
-                  try {
-                    decoder = new TextDecoder(encoding);
-                  } catch {
-                    decoder = new TextDecoder('utf-8');
-                  }
+                  // Always use UTF-8, do not guess the encoding.
+                  decoder = new TextDecoder('utf-8');
                 }
 
                 outputChunks.push(data);
